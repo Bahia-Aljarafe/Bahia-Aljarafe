@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bahía Aljarafe | Freiduría & Marisquería en Bormujos</title>
 
-    <!-- Favicon para la pestaña del navegador -->
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23d4af37' d='M256 0c17.7 0 32 14.3 32 32V68.8C359.8 80.2 416 141.5 416 216c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-53-43-96-96-96s-96 43-96 96c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-74.5 56.2-135.8 128-147.2V32c0-17.7 14.3-32 32-32zM128 384c0-35.3 28.7-64 64-64h128c35.3 0 64 28.7 64 64v32c0 53-43 96-96 96H224c-53 0-96-43-96-96V384z'/></svg>">
 
     <!-- Tipografías de Google Fonts -->
@@ -44,7 +44,6 @@
                 <li><a href="#horario">Horario</a></li>
                 <li><a href="#contacto">Contacto</a></li>
                 <li>
-                    <!-- Reserva llamando directamente al móvil -->
                     <a href="tel:680865936" class="btn btn-gold">
                         <i class="fa-solid fa-phone"></i> Reservar
                     </a>
@@ -62,7 +61,6 @@
             <h1>Freiduría & Marisquería Tradicional</h1>
             <p>Disfruta del mejor pescaíto frito, mariscos frescos y atún rojo salvaje en nuestro amplio salón o en nuestra terraza exterior.</p>
             <div class="hero-buttons">
-                <!-- Reserva llamando al móvil -->
                 <a href="tel:680865936" class="btn btn-gold">
                     <i class="fa-solid fa-phone"></i> Reservar (680 86 59 36)
                 </a>
@@ -103,6 +101,7 @@
 
         <div class="gallery-grid">
             <div class="photo-card">
+                <!-- Cambia 'src' por tu foto local ej: img/pescaito.jpg -->
                 <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80" alt="Pescaíto Frito" class="photo-img">
                 <div class="photo-info">
                     <h4>Pescaíto Frito Variado</h4>
@@ -111,6 +110,7 @@
             </div>
 
             <div class="photo-card">
+                <!-- Cambia 'src' por tu foto local ej: img/atun.jpg -->
                 <img src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80" alt="Atún Rojo Salvaje" class="photo-img">
                 <div class="photo-info">
                     <h4>Atún Rojo Salvaje</h4>
@@ -119,7 +119,8 @@
             </div>
 
             <div class="photo-card">
-                <img src="https://images.unsplash.com/photo-1559737671-da0f2589fe2d?auto=format&fit=crop&w=600&q=80" alt="Gambas y Mariscos" class="photo-img">
+                <!-- Cambia 'src' por tu foto local ej: img/marisco.jpg -->
+                <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80" alt="Mariscos de la Costa" class="photo-img">
                 <div class="photo-info">
                     <h4>Mariscos de la Costa</h4>
                     <p>Gambas blancas, langostinos y almejas de la máxima frescura.</p>
@@ -127,10 +128,11 @@
             </div>
 
             <div class="photo-card">
-                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Terraza y Salón" class="photo-img">
+                <!-- Cambia 'src' por tu foto local de la merluza ej: img/merluza.jpg -->
+                <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80" alt="Pescados a la Plancha y Guisos" class="photo-img">
                 <div class="photo-info">
-                    <h4>Salón y Terraza</h4>
-                    <p>Ambiente acogedor e ideal para familias y grupos de amigos.</p>
+                    <h4>Pescados a la Plancha y Guisos</h4>
+                    <p>Merluza, pez espada y guisos marineros preparados al momento con la máxima frescura.</p>
                 </div>
             </div>
         </div>
@@ -140,7 +142,8 @@
     <section id="nosotros" class="features">
         <div class="features-grid">
             <div class="feature-card">
-                <i class="fa-solid fa-wheat-straw feature-icon"></i>
+                <!-- Icono de Sin Gluten solucionado -->
+                <i class="fa-solid fa-wheat-awn feature-icon"></i>
                 <h3>Comida Sin Gluten</h3>
                 <p>Procesos e ingredientes adaptados para ofrecer todo el sabor del pescaíto frito con total seguridad celiaca.</p>
             </div>
@@ -358,7 +361,6 @@
             <div id="contacto">
                 <h2>Ubicación y Reservas</h2>
                 <div class="gold-divider" style="margin-left: 0;"></div>
-                <!-- Texto ajustado según solicitud -->
                 <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
                     Nos encontramos cerca del Hospital San Juan de Dios en Bormujos (Sevilla).
                 </p>
@@ -381,7 +383,6 @@
                 </div>
 
                 <div style="margin-top: 2rem;">
-                    <!-- Llamada prioritaria al móvil -->
                     <a href="tel:680865936" class="btn btn-gold">
                         <i class="fa-solid fa-phone"></i> Llamar al Móvil para Reservar
                     </a>
@@ -406,7 +407,6 @@
             navMenu.classList.toggle('active');
         });
 
-        // Cerrar menú al hacer clic en un enlace
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
