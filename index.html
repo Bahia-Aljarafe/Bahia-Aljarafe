@@ -365,15 +365,18 @@
                     Nos encontramos cerca del Hospital San Juan de Dios en Bormujos (Sevilla).
                 </p>
                 
+                <!-- Dirección enlazada directamente a Google Maps -->
                 <div class="contact-detail">
                     <i class="fa-solid fa-location-dot"></i>
                     <div>
                         <strong>Dirección:</strong><br>
-                        <span style="color: var(--text-muted);">Avda. Universidad de Salamanca, 7 Local 10, 41930 Bormujos, Sevilla</span>
+                        <a href="https://maps.google.com/?q=Avda.+Universidad+de+Salamanca,+7+Local+10,+41930+Bormujos,+Sevilla" target="_blank" rel="noopener" style="color: var(--primary-blue); font-weight: 600; text-decoration: underline;">
+                            Avda. Universidad de Salamanca, 7 Local 10, 41930 Bormujos, Sevilla
+                        </a>
                     </div>
                 </div>
 
-                <div class="contact-detail">
+                <div class="contact-detail" style="margin-top: 1rem;">
                     <i class="fa-solid fa-phone"></i>
                     <div>
                         <strong>Teléfonos de Contacto & Reserva:</strong><br>
@@ -382,7 +385,21 @@
                     </div>
                 </div>
 
-                <div style="margin-top: 2rem;">
+                <!-- Mini Mapa interactivo que lleva a Google Maps -->
+                <div class="map-preview-container">
+                    <a href="https://maps.google.com/?q=Avda.+Universidad+de+Salamanca,+7+Local+10,+41930+Bormujos,+Sevilla" target="_blank" rel="noopener" class="map-link-preview" title="Ver en Google Maps">
+                        <!-- Mapa incrustado limpio de Google Maps -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.9664567!2d-6.0715!3d37.3775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126cff6b!2sAv.+Universidad+de+Salamanca%2C+7%2C+41930+Bormujos%2C+Sevilla!5e0!3m2!1ses!2ses!4v1!5m2!1ses!2ses" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <span class="map-overlay-btn"><i class="fa-solid fa-map-location-dot"></i> Abrir en Google Maps</span>
+                    </a>
+                </div>
+
+                <div style="margin-top: 1.5rem;">
                     <a href="tel:680865936" class="btn btn-gold">
                         <i class="fa-solid fa-phone"></i> Llamar al Móvil para Reservar
                     </a>
