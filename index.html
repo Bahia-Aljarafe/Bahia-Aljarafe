@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bahía Aljarafe | Freiduría & Marisquería en Bormujos</title>
 
+    <!-- Favicon para la pestaña del navegador -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23d4af37' d='M256 0c17.7 0 32 14.3 32 32V68.8C359.8 80.2 416 141.5 416 216c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-53-43-96-96-96s-96 43-96 96c0 13.3-10.7 24-24 24s-24-10.7-24-24c0-74.5 56.2-135.8 128-147.2V32c0-17.7 14.3-32 32-32zM128 384c0-35.3 28.7-64 64-64h128c35.3 0 64 28.7 64 64v32c0 53-43 96-96 96H224c-53 0-96-43-96-96V384z'/></svg>">
+
     <!-- Tipografías de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +16,7 @@
     <!-- Iconos FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Archivo CSS Personalizado vinculado -->
+    <!-- Archivo CSS vinculado -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,16 +31,25 @@
                     <span class="brand-slogan">La mar en su boca</span>
                 </div>
             </div>
-            <ul class="nav-links">
+
+            <button class="mobile-toggle" id="menuToggle" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="navMenu">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#galeria">Nuestros Platos</a></li>
                 <li><a href="#carta">Carta</a></li>
+                <li><a href="#opiniones">Reseñas</a></li>
                 <li><a href="#horario">Horario</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li>
+                    <!-- Reserva llamando directamente al móvil -->
+                    <a href="tel:680865936" class="btn btn-gold">
+                        <i class="fa-solid fa-phone"></i> Reservar
+                    </a>
+                </li>
             </ul>
-            <a href="tel:955919999" class="btn btn-gold">
-                <i class="fa-solid fa-phone"></i> Reservar
-            </a>
         </div>
     </nav>
 
@@ -50,8 +62,76 @@
             <h1>Freiduría & Marisquería Tradicional</h1>
             <p>Disfruta del mejor pescaíto frito, mariscos frescos y atún rojo salvaje en nuestro amplio salón o en nuestra terraza exterior.</p>
             <div class="hero-buttons">
-                <a href="#carta" class="btn btn-gold">Ver la Carta</a>
-                <a href="#contacto" class="btn btn-outline">Dónde Estamos</a>
+                <!-- Reserva llamando al móvil -->
+                <a href="tel:680865936" class="btn btn-gold">
+                    <i class="fa-solid fa-phone"></i> Reservar (680 86 59 36)
+                </a>
+                <a href="#carta" class="btn btn-outline">Ver la Carta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Puntuación Google Maps -->
+    <section id="opiniones" class="google-reviews-section">
+        <div class="reviews-container">
+            <div class="review-score">
+                <div class="score-num">4.5</div>
+                <div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="review-count">Basado en más de 500 opiniones en Google Maps</div>
+                </div>
+            </div>
+            <a href="https://maps.google.com/?q=Bahia+Aljarafe+Bormujos" target="_blank" rel="noopener" class="btn btn-blue">
+                <i class="fa-brands fa-google"></i> Dejar una reseña en Google
+            </a>
+        </div>
+    </section>
+
+    <!-- Galería / Fotos de los Platos -->
+    <section id="galeria" class="gallery-section">
+        <div class="section-header">
+            <h2>Nuestra Especialidad en Fotos</h2>
+            <div class="gold-divider"></div>
+            <p>Una muestra de la calidad y frescura de nuestros platos</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80" alt="Pescaíto Frito" class="photo-img">
+                <div class="photo-info">
+                    <h4>Pescaíto Frito Variado</h4>
+                    <p>Frito al punto en aceite limpio, apto con opción sin gluten.</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?auto=format&fit=crop&w=600&q=80" alt="Atún Rojo Salvaje" class="photo-img">
+                <div class="photo-info">
+                    <h4>Atún Rojo Salvaje</h4>
+                    <p>Cortes seleccionados de Ventresca, Tarantelo y Parpatana.</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1559737671-da0f2589fe2d?auto=format&fit=crop&w=600&q=80" alt="Gambas y Mariscos" class="photo-img">
+                <div class="photo-info">
+                    <h4>Mariscos de la Costa</h4>
+                    <p>Gambas blancas, langostinos y almejas de la máxima frescura.</p>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Terraza y Salón" class="photo-img">
+                <div class="photo-info">
+                    <h4>Salón y Terraza</h4>
+                    <p>Ambiente acogedor e ideal para familias y grupos de amigos.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -62,7 +142,7 @@
             <div class="feature-card">
                 <i class="fa-solid fa-wheat-straw feature-icon"></i>
                 <h3>Comida Sin Gluten</h3>
-                <p>Procesos e ingredientes cuidadosamente adaptados para ofrecer todo el sabor del pescaíto frito con total seguridad celiaca.</p>
+                <p>Procesos e ingredientes adaptados para ofrecer todo el sabor del pescaíto frito con total seguridad celiaca.</p>
             </div>
             <div class="feature-card">
                 <i class="fa-solid fa-sun feature-icon"></i>
@@ -72,7 +152,7 @@
             <div class="feature-card">
                 <i class="fa-solid fa-fish feature-icon"></i>
                 <h3>Atún Rojo Salvaje</h3>
-                <p>Selección especial de los mejores cortes de atún rojo (Tarantelo, Ventresca, Parpatana) listos para degustar.</p>
+                <p>Selección especial de los mejores cortes de atún rojo listos para degustar.</p>
             </div>
         </div>
     </section>
@@ -278,8 +358,9 @@
             <div id="contacto">
                 <h2>Ubicación y Reservas</h2>
                 <div class="gold-divider" style="margin-left: 0;"></div>
+                <!-- Texto ajustado según solicitud -->
                 <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
-                    Nos encontramos situados frente al Hospital San Juan de Dios en Bormujos (Sevilla).
+                    Nos encontramos cerca del Hospital San Juan de Dios en Bormujos (Sevilla).
                 </p>
                 
                 <div class="contact-detail">
@@ -293,15 +374,16 @@
                 <div class="contact-detail">
                     <i class="fa-solid fa-phone"></i>
                     <div>
-                        <strong>Teléfonos de Reserva:</strong><br>
-                        <a href="tel:955919999" style="font-weight: bold; color: var(--primary-blue);">955 91 99 99</a> / 
-                        <a href="tel:680865936" style="font-weight: bold; color: var(--primary-blue);">680 86 59 36</a>
+                        <strong>Teléfonos de Contacto & Reserva:</strong><br>
+                        <a href="tel:680865936" style="font-weight: bold; color: var(--primary-blue);">680 86 59 36 (Móvil)</a> / 
+                        <a href="tel:955919999" style="color: var(--text-muted);">955 91 99 99 (Fijo)</a>
                     </div>
                 </div>
 
                 <div style="margin-top: 2rem;">
-                    <a href="tel:955919999" class="btn btn-blue">
-                        <i class="fa-solid fa-phone"></i> Llamar para Reservar
+                    <!-- Llamada prioritaria al móvil -->
+                    <a href="tel:680865936" class="btn btn-gold">
+                        <i class="fa-solid fa-phone"></i> Llamar al Móvil para Reservar
                     </a>
                 </div>
             </div>
@@ -315,5 +397,21 @@
         <p>Avda. Universidad de Salamanca, 7 Local 10 - Bormujos, Sevilla</p>
     </footer>
 
+    <!-- Script para desplegar menú móvil -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
