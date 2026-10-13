@@ -1,8 +1,7 @@
 /* ==========================================
-   Bahía Aljarafe - Estilos Principales
+   Bahía Aljarafe - Estilos Principales (Responsive & Modern)
    ========================================== */
 
-/* Variables de color y fuentes */
 :root {
     --primary-blue: #0b2545;
     --primary-dark: #061527;
@@ -22,7 +21,6 @@
     --radius-md: 12px;
 }
 
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -40,7 +38,6 @@ body {
     line-height: 1.6;
 }
 
-/* Utilidades de texto */
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
     color: var(--primary-blue);
@@ -56,14 +53,16 @@ a {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
     font-weight: 600;
     font-size: 0.95rem;
     border-radius: 50px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
     border: none;
+    text-align: center;
 }
 
 .btn:hover {
@@ -99,7 +98,7 @@ a {
     background-color: var(--primary-dark);
 }
 
-/* Header & Navegación */
+/* Header & Navegación Responsive */
 .navbar {
     position: sticky;
     top: 0;
@@ -112,7 +111,7 @@ a {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 1.25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,7 +130,7 @@ a {
 
 .brand-name {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -139,21 +138,32 @@ a {
 }
 
 .brand-slogan {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-style: italic;
     color: var(--accent-gold);
+    display: block;
 }
 
 .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.25rem;
     list-style: none;
     font-size: 0.9rem;
     font-weight: 500;
+    align-items: center;
 }
 
 .nav-links a:hover {
     color: var(--accent-gold);
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* Hero Section */
@@ -161,7 +171,7 @@ a {
     background: linear-gradient(rgba(11, 37, 69, 0.88), rgba(6, 21, 39, 0.92)),
                 url('https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     color: var(--text-light);
-    padding: 6rem 1.5rem;
+    padding: 5rem 1.25rem;
     text-align: center;
 }
 
@@ -180,19 +190,18 @@ a {
     font-weight: 600;
     padding: 0.4rem 1rem;
     border-radius: 50px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .hero h1 {
     color: var(--text-light);
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #cbd5e1;
     margin-bottom: 2rem;
 }
@@ -204,9 +213,102 @@ a {
     flex-wrap: wrap;
 }
 
+/* Valoraciones Google Maps */
+.google-reviews-section {
+    background-color: var(--bg-card);
+    padding: 2.5rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.reviews-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    background: var(--bg-light);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.review-score {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.score-num {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    line-height: 1;
+}
+
+.stars {
+    color: #f59e0b;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.review-count {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Galería de Fotos / Platos */
+.gallery-section {
+    padding: 4rem 1.25rem;
+    background-color: var(--bg-light);
+}
+
+.gallery-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.photo-card {
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.photo-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.photo-info {
+    padding: 1rem;
+}
+
+.photo-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.photo-info p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
 /* Características */
 .features {
-    padding: 4rem 1.5rem;
+    padding: 4rem 1.25rem;
     background-color: var(--bg-card);
 }
 
@@ -214,13 +316,13 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
 }
 
 .feature-card {
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     transition: box-shadow 0.3s ease;
@@ -231,36 +333,35 @@ a {
 }
 
 .feature-icon {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--accent-gold);
     margin-bottom: 1rem;
 }
 
 .feature-card h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
 .feature-card p {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: var(--text-muted);
 }
 
-/* Sección de la Carta */
+/* Carta */
 .menu-section {
-    padding: 5rem 1.5rem;
+    padding: 4rem 1.25rem;
     background-color: var(--bg-light);
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 .section-header h2 {
     font-size: 2.2rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .gold-divider {
@@ -268,10 +369,6 @@ a {
     height: 3px;
     background-color: var(--accent-gold);
     margin: 0.5rem auto 1rem;
-}
-
-.section-header p {
-    color: var(--text-muted);
 }
 
 .menu-nav {
@@ -286,9 +383,9 @@ a {
 .menu-nav-link {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    padding: 0.4rem 0.9rem;
+    padding: 0.4rem 0.85rem;
     border-radius: 50px;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: var(--text-main);
     font-weight: 500;
 }
@@ -303,21 +400,21 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 
 .menu-category {
     background-color: var(--bg-card);
     border-radius: var(--radius-md);
-    padding: 1.75rem;
+    padding: 1.5rem;
     box-shadow: var(--shadow-sm);
     border-top: 4px solid var(--accent-gold);
 }
 
 .category-title {
-    font-size: 1.3rem;
-    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -342,7 +439,7 @@ a {
     align-items: baseline;
     padding: 0.6rem 0;
     border-bottom: 1px dashed var(--border-color);
-    font-size: 0.92rem;
+    font-size: 0.9rem;
 }
 
 .menu-item:last-child {
@@ -352,11 +449,10 @@ a {
 .item-price {
     font-weight: 700;
     color: var(--primary-blue);
-    margin-left: 1rem;
+    margin-left: 0.75rem;
     white-space: nowrap;
 }
 
-/* Vinos - Subcolumnas */
 .wine-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -373,9 +469,13 @@ a {
     margin-bottom: 0.6rem;
 }
 
+.full-width-card {
+    grid-column: 1 / -1;
+}
+
 /* Info: Horario y Contacto */
 .info-section {
-    padding: 5rem 1.5rem;
+    padding: 4rem 1.25rem;
     background-color: var(--bg-card);
 }
 
@@ -383,7 +483,7 @@ a {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
 }
 
@@ -392,7 +492,7 @@ a {
     padding: 1.5rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--border-color);
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .hours-row {
@@ -425,16 +525,12 @@ a {
     margin-top: 0.2rem;
 }
 
-.full-width-card {
-    grid-column: 1 / -1;
-}
-
 /* Footer */
 footer {
     background-color: var(--primary-dark);
     color: var(--text-muted);
     text-align: center;
-    padding: 2.5rem 1.5rem;
+    padding: 2.5rem 1.25rem;
     font-size: 0.85rem;
     border-top: 1px solid #1e293b;
 }
@@ -448,21 +544,53 @@ footer .footer-title {
     font-weight: 700;
 }
 
-/* Media Queries para Responsive */
+/* Adaptación Responsive Móvil */
 @media (max-width: 768px) {
+    .mobile-toggle {
+        display: block;
+    }
+
     .nav-links {
-        display: none; /* Simplificación para responsive móvil */
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-dark);
+        padding: 1.5rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero p {
         font-size: 0.95rem;
     }
 
+    .reviews-container {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .review-score {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
     .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-container {
         grid-template-columns: 1fr;
     }
 }
