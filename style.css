@@ -169,7 +169,7 @@ a {
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(11, 37, 69, 0.88), rgba(6, 21, 39, 0.92)),
-                url('https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+                url('img/terraza.jpg') center/cover no-repeat;
     color: var(--text-light);
     padding: 5rem 1.25rem;
     text-align: center;
